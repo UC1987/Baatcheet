@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN AND REGISTRATION PAGE</title>
+    <link rel="stylesheet" href="login1.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+                    <form action="connect.php" method="post">
+                        <label for="Email id">Email id</label>
+                        <input type="email" class="input-box" id="email" name="email" placeholder="Enter user id" required>
+                        <label for="password">Password</label>
+                        <input type="password" class="input-box" id="Password" name="Password" placeholder="Enter password" required>
+
+                        <input type="checkbox" class="chech-box"><span>Remember Password</span>
+                        <button type="submit" class="submit-btn">Log In</button>
+                        <a href="">Forgot Password</a>
+                    </form>
+                    <button type="button" class="btn" onclick="openSignup()">I'm new here</button>
+                </div>
+                <div class="card-back">
+                    <h2>SIGN UP</h2>
+                    <form>
+                        <label for="firstName">first Name </label>
+                        <input type="text" class="input-box" id="firstname" name="firstname" placeholder="Enter fistname" required>
+                        <label for="middleName">middle Name </label>
+                        <input type="text" class="input-box" id="middlename" name="middlename" placeholder="Enter middle name" required>
+                        <label for="LastName">Last Name </label>
+                        <input type="text" class="input-box" id="lastname" name="lastname" placeholder="Enter last name" required>
+                        <label for="Email id">Email id</label>
+                        <input type="email" class="input-box" id="email" name="email" placeholder="Enter email id" required>
+                        <label for="password">Password</label>
+                        <input type="password" class="input-box" id="password" name="password" placeholder="Enter password" required>
+                        <input type="password" class="input-box" id="cpassword" name="cpassword" placeholder="Confirm password" required>
+                        <label for="organization name ">organization name</label>
+                        <input type="text" class="input-box" id="organization" name="organization" placeholder="Enter organization name" required>
+                        <input type="checkbox" class="chech-box"><span>Remember Password</span>
+                        <button type="submit" class="submit-btn">SIGN IN</button>
+                    </form>
+                    <button type="button" class="btn" onclick="openLogin()">I've an account</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var card = document.getElementById("card");
+
+        function openSignup() {
+            card.style.transform = "rotateY(-180deg)";
+        }
+
+        function openLogin() {
+            card.style.transform = "rotateY(0deg)";
+        }
+    </script>
+
+</body>
+
+</html>
